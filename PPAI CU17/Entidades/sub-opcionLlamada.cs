@@ -6,23 +6,20 @@ using System.Threading.Tasks;
 
 namespace PPAI_CU17.Entidades
 {
-    public class OpcionLlamada
+    public class sub_opcionLlamada
     {
         private string nombre;
-        private string mensajesOpciones;
+        private string mensajeSubOpciones;
         private int nroOrden;
         private string audioMensajeSubOpciones;
-        public List<sub_opcionLlamada> subopcionesSeleccionadas;
 
 
-
-        public OpcionLlamada(string nombre, string mensajesOpciones, int nroOrden, string audioMensajeSubOpciones, List<sub_opcionLlamada> subopcionesSeleccionadas)
+        public sub_opcionLlamada(string nombre, string mensajeSubOpciones, int nroOrden, string audioMensajeSubOpciones)
         {
             this.nombre = nombre;
-            this.mensajesOpciones = mensajesOpciones;
+            this.mensajeSubOpciones = mensajeSubOpciones;
             this.nroOrden = nroOrden;
             this.audioMensajeSubOpciones = audioMensajeSubOpciones;
-            this.subopcionesSeleccionadas = subopcionesSeleccionadas;
         }
         public string _nombre
         {
@@ -31,8 +28,8 @@ namespace PPAI_CU17.Entidades
         }
         public string _mensajeSubOpciones
         {
-            get => mensajesOpciones;
-            set => mensajesOpciones = value;
+            get => mensajeSubOpciones;
+            set => mensajeSubOpciones = value;
         }
 
         public int _nroOrden
@@ -46,13 +43,6 @@ namespace PPAI_CU17.Entidades
             set => audioMensajeSubOpciones = value;
         }
 
-        public List<sub_opcionLlamada> _subopcionesSeleccionadas
-        {
-            get => subopcionesSeleccionadas;
-            set => subopcionesSeleccionadas = value;
-        }
-
 
     }
 }
-

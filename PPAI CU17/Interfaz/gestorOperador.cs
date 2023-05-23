@@ -22,18 +22,27 @@ namespace PPAI_CU17
         private List<CategoriaLlamada> categoriasllamadaencontradas = new List<CategoriaLlamada>();
         private List<InformacionCliente> informacionClientesEncontrada = new List<InformacionCliente>();
         private List<OpcionLlamada> opcionllamadaEncontradas = new List<OpcionLlamada>();
+        private List<sub_opcionLlamada> subopcionLlamada = new List<sub_opcionLlamada>();
         private List<Validacion> validacionesEncontradas = new List<Validacion>();
 
         //instanciamos la clase de la interfaz
+
         private InterfazOperador pantalla;
 
-        //metodo constructor con inicializacion de todos los atributos pasados por parametro y sino pasan parametros
-        //que los inicialize vacios segun su tipo de dato
+        //metodo constructor con inicializacion atributos
 
         public gestorOperador(InterfazOperador consultarLlamadas)
         {
+
+
+
+            //AGREGAMOS LOS ESTADOS
+
             estados.Add(new Estado("En Curso"));
             estados.Add(new Estado("Finalizada"));
+
+
+            //Generamos un Cambio de Estado
 
             Random random = new Random();
 
@@ -56,7 +65,50 @@ namespace PPAI_CU17
 
             }
 
-            // Crear objetos con descripciones diferentes y asignar valores consecutivos
+
+
+            // Crear objetos -------------------------------------------------------------------------------------------------------------------------------
+
+            // Subopciones
+            subopcionLlamada.Add(new sub_opcionLlamada("subopcion 1", "Generar Reclamo", 1, "Audio Generar Reclamo"));
+
+
+            // Opciones
+            opcionllamadaEncontradas.Add(new OpcionLlamada("opcion 1", "Informar y Pedir Tarjeta", 1, "Audio Informar y Pedir Tarjeta", new List<sub_opcionLlamada> { subopcionLlamada[0]}));
+            opcionllamadaEncontradas.Add(new OpcionLlamada("opcion 1", "Informar y Anular", 1, "Audio Informar y Anular Cuenta", new List<sub_opcionLlamada> {}));
+
+            opcionllamadaEncontradas.Add(new OpcionLlamada("opcion 1", "Informar y Blanquear", 1, "Audio Informar y Blanquear Cuenta", new List<sub_opcionLlamada> { }));
+            opcionllamadaEncontradas.Add(new OpcionLlamada("opcion 1", "Informar", 1, "Audio Informar", new List<sub_opcionLlamada> { }));
+
+
+            // Creando las Categorias
+            categoriasllamadaencontradas.Add(new CategoriaLlamada("Robo","Categoria Robo", "1", "Audio Robo", new List<OpcionLlamada>{ opcionllamadaEncontradas[0], opcionllamadaEncontradas[1]}));
+            categoriasllamadaencontradas.Add(new CategoriaLlamada("Bloqueo", "Categoria Robo", "2", "audio2", new List<OpcionLlamada> { opcionllamadaEncontradas[2], opcionllamadaEncontradas[3] }));
+
+
+            //Creando Clientes
+
+            for (int i = 0; i < 3; i++)
+            {
+                int dni = random.Next(10000000, 55555555);
+                string nombre = "Cliente " + i.ToString();
+
+                // Generacion Número de celular aleatorio
+                string phoneNumber = "+";
+
+                for (int b = 0; b < 8; b++)
+                {
+                    phoneNumber += random.Next(0, 10);
+                }
+                string numeroCelular = phoneNumber;
+
+                Cliente cliente = new Cliente(dni, nombre, numeroCelular);
+                clientes.Add(cliente);
+                //Crea el Cliente
+            }
+
+
+            //
 
             for (int i = 1; i <= 9; i++)
             {
@@ -80,21 +132,17 @@ namespace PPAI_CU17
             respuestasDeClientes.Add(new RespuestaDeCliente(DateTime.Now, respuestasPosibles[5]));
 
 
-            for (int i = 0; i < 3; i++)
-            {
-                int dniAleatorio = random.Next(10000000, 99999999);
-                string nombreAleatorio = "Cliente " + i.ToString();
-                string celularAleatorio = "+12345678" + i.ToString(); // Número de celular aleatorio (reemplazar con lógica real)
 
-                Cliente cliente = new Cliente(dniAleatorio, nombreAleatorio, celularAleatorio);
-                clientes.Add(cliente);
-            }
+            //instanciamos la funcion para crear 3 llamadas
+
             llamadas.Add(CrearLlamada());
             llamadas.Add(CrearLlamada());
             llamadas.Add(CrearLlamada());
+
             this.pantalla = consultarLlamadas;
         }
 
+        //Creamos las Llamadas
 
         Llamada CrearLlamada()
         {
@@ -116,6 +164,9 @@ namespace PPAI_CU17
 
             return llamada;
         }
+
+
+
         //metodos get y set
         public List<Estado> _estados
         {
@@ -169,7 +220,14 @@ namespace PPAI_CU17
         }
 
 
-        // metodo llamado "consultarEncuesta()" que le envia un mensaje llamado "solicitarPeriodoLlamada" a la pantalla "ConsultarLlamadas"
+
+
+        //Desarrollo de el CU
+
+
+
+        // metodo llamado "consultarEncuesta()" que le envia un mensaje llamado "solicitarPeriodoLlamada"
+        // a la pantalla "ConsultarLlamadas"
         public void consultarEncuesta()
         {
             // como identifico la ventana activa?

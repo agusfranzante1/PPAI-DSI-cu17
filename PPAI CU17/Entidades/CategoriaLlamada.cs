@@ -8,23 +8,24 @@ namespace PPAI_CU17.Entidades
 {
     public class CategoriaLlamada
     {
-        private string mensajesOpciones;
+        private string mensajesCategoria;
         private string nombre;
         private string nroOrden;
-        private List<string> audioMensajeOpciones;
+        private string audioMensajeOpciones;
+        public List<OpcionLlamada> opcionesSeleccionada1 ;
 
-
-        public CategoriaLlamada(string mensajesOpciones, string nombre, string nroOrden, List<string> audioMensajeOpciones)
+        public CategoriaLlamada(string mensajesOpciones, string nombre, string nroOrden, string audioMensajeOpciones, List<OpcionLlamada> opcionesSeleccionada1)
         {
-            this.mensajesOpciones = mensajesOpciones;
+            this.mensajesCategoria = mensajesOpciones;
             this.nombre = nombre;
             this.nroOrden = nroOrden;
             this.audioMensajeOpciones = audioMensajeOpciones;
+            this.opcionesSeleccionada1 = opcionesSeleccionada1;
         }
         public string _mensajesOpciones
         {
-            get => mensajesOpciones;
-            set => mensajesOpciones = value;
+            get => mensajesCategoria;
+            set => mensajesCategoria = value;
         }
         public string _valor
         {
@@ -37,10 +38,16 @@ namespace PPAI_CU17.Entidades
             get => nroOrden;
             set => nroOrden = value;
         }
-        public List<string> _audioMensajeOpciones
+        public string _audioMensajeOpciones
         {
             get => audioMensajeOpciones;
             set => audioMensajeOpciones = value;
+        }
+
+        public List<OpcionLlamada> _opcionesSeleccionada
+        {
+            get => opcionesSeleccionada1;
+            set => opcionesSeleccionada1 = value;
         }
 
 
