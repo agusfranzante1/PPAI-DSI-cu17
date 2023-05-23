@@ -12,7 +12,7 @@ namespace PPAI_CU17.Entidades
         private string nombre;
         private string nroOrden;
         private string audioMensajeOpciones;
-        public List<OpcionLlamada> opcionesSeleccionada1 ;
+        public List<OpcionLlamada> opcionesSeleccionada1;
 
         public CategoriaLlamada(string mensajesOpciones, string nombre, string nroOrden, string audioMensajeOpciones, List<OpcionLlamada> opcionesSeleccionada1)
         {
@@ -44,7 +44,7 @@ namespace PPAI_CU17.Entidades
             set => audioMensajeOpciones = value;
         }
 
-        public List<OpcionLlamada> _opcionesSeleccionada
+        public List<OpcionLlamada> _opcionesSeleccionada1
         {
             get => opcionesSeleccionada1;
             set => opcionesSeleccionada1 = value;

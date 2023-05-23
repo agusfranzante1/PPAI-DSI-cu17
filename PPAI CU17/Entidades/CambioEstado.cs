@@ -16,6 +16,8 @@ namespace PPAI_CU17.Entidades
 
         public CambioEstado(DateTime fechaHoraInicio, Estado estado, DateTime? fechaHoraFin)
         {
+            // iniciar el atributo FechaHoraInicio vacio
+
             this.fechaHoraInicio = fechaHoraInicio;
             this.estado = estado;
 
@@ -39,6 +41,14 @@ namespace PPAI_CU17.Entidades
         {
             get => fechaHoraFin;
             set => fechaHoraFin = value;
+        }
+
+
+
+        public string esEstadoInicializada() 
+        {
+            string estadoString = estado.ToString();
+            return estadoString;     
         }
     }
 }

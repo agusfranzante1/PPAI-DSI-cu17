@@ -13,7 +13,6 @@ namespace PPAI_CU17.Entidades
         private int nroOrden;
         private string audioMensajeSubOpciones;
 
-
         public sub_opcionLlamada(string nombre, string mensajeSubOpciones, int nroOrden, string audioMensajeSubOpciones)
         {
             this.nombre = nombre;
