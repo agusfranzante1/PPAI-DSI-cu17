@@ -1,0 +1,11 @@
+C:\Users\Agustin\Desktop\PPAI DSI ENTREGA 1\PPAI CU17\PPAI CU17\bin\Debug\PPAI CU17.exe.config
+C:\Users\Agustin\Desktop\PPAI DSI ENTREGA 1\PPAI CU17\PPAI CU17\bin\Debug\PPAI CU17.exe
+C:\Users\Agustin\Desktop\PPAI DSI ENTREGA 1\PPAI CU17\PPAI CU17\bin\Debug\PPAI CU17.pdb
+C:\Users\Agustin\Desktop\PPAI DSI ENTREGA 1\PPAI CU17\PPAI CU17\obj\Debug\PPAI CU17.csproj.AssemblyReference.cache
+C:\Users\Agustin\Desktop\PPAI DSI ENTREGA 1\PPAI CU17\PPAI CU17\obj\Debug\PPAI CU17.csproj.SuggestedBindingRedirects.cache
+C:\Users\Agustin\Desktop\PPAI DSI ENTREGA 1\PPAI CU17\PPAI CU17\obj\Debug\PPAI_CU17.Form1.resources
+C:\Users\Agustin\Desktop\PPAI DSI ENTREGA 1\PPAI CU17\PPAI CU17\obj\Debug\PPAI_CU17.Properties.Resources.resources
+C:\Users\Agustin\Desktop\PPAI DSI ENTREGA 1\PPAI CU17\PPAI CU17\obj\Debug\PPAI CU17.csproj.GenerateResource.cache
+C:\Users\Agustin\Desktop\PPAI DSI ENTREGA 1\PPAI CU17\PPAI CU17\obj\Debug\PPAI CU17.csproj.CoreCompileInputs.cache
+C:\Users\Agustin\Desktop\PPAI DSI ENTREGA 1\PPAI CU17\PPAI CU17\obj\Debug\PPAI CU17.exe
+C:\Users\Agustin\Desktop\PPAI DSI ENTREGA 1\PPAI CU17\PPAI CU17\obj\Debug\PPAI CU17.pdb
